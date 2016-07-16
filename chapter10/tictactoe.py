@@ -42,7 +42,7 @@ def whoGoesFirst():
 
 def playAgain():
     #This function returns True if the player wants to play again, otherwise it returns False
-    print('Do you want to play again? (yes or no))')
+    print('Do you want to play again? (yes or no)')
     return input().lower().startswith('y')
 
 def makeMove(board, letter, move):
@@ -133,7 +133,7 @@ def isBoardFull(board):
     for i in range(1, 10):
         if isSpaceFree(board, i):
             return False
-        return True
+    return True
 
 print('Welcome to Tic Tac Toe!')
 
@@ -181,5 +181,5 @@ while True:
                 else:
                     turn = 'player'
 
-        if not playAgain():
-            break
+    if not playAgain():
+        break
