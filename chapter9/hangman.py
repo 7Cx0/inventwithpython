@@ -60,7 +60,7 @@ words = 'ant baboon badger bat bear beaver camel cat clam cobra cougar coyote cr
 
 def getRandomWord(wordList):
     # This function returns a random string from the passed list of strings.
-    wordIndex = random.randint(0, len(wordList) -1)
+    wordIndex = random.randint(0, len(wordList) - 1)
     return wordList[wordIndex]
 
 def displayBoard(HANGMANPICS, missedLetters, correctLetters, secretWord):
@@ -69,7 +69,7 @@ def displayBoard(HANGMANPICS, missedLetters, correctLetters, secretWord):
 
     print('Missed letters:', end=' ')
     for letter in missedLetters:
-        print(letter,end=' ')
+        print(letter, end=' ')
     print()
 
     blanks = '_' * len(secretWord)
