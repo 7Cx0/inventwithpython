@@ -88,7 +88,7 @@ def getGuess(alreadyGuessed):
         print('Guess a letter.')
         guess = input()
         guess = guess.lower()
-        if len(guess) !=1:
+        if len(guess) != 1:
             print('Please enter a single letter.')
         elif guess in alreadyGuessed:
             print('You have already guessed that letter. Choose again.')
@@ -109,7 +109,7 @@ secretWord = getRandomWord(words)
 gameIsDone = False
 
 while True:
-    displayBoard(HANGMANPICS, missedLetters, correctLEtters, secretWord)
+    displayBoard(HANGMANPICS, missedLetters, correctLetters, secretWord)
 
     # Let the player type in a letter.
     guess = getGuess(missedLetters + correctLetters)
@@ -130,7 +130,7 @@ while True:
         missedLetters = missedLetters + guess
 
         #Check if player has guessed too many times and lost
-        if len(missedLetters) == len(HANGMANPICS) -1:
+        if len(missedLetters) == len(HANGMANPICS) - 1:
             displayBoard(HANGMANPICS, missedLetters, correctLetters, secretWord)
             print('You have run out of guesses!\nAfter ' + str(len(missedLetters)) + ' missed guesses and ' + str(len(correctLetters)) + ' correct guesses, the word was "' + secretWord + '"')
             gameIsDone = True
@@ -139,7 +139,7 @@ while True:
     if gameIsDone:
         if playAgain():
             missedLetters = ''
-            correctLEtters = ''
+            correctLetters = ''
             gameIsDone = False
             secretWord = getRandomWord(words)
         else:
