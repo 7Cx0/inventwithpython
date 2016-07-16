@@ -63,9 +63,9 @@ while True:
             print('Guess #%s: ' % (numGuesses))
             guess = input()
 
-        clue = getGlues(guess, secretNum)
+        clue = getClues(guess, secretNum)
         print(clue)
-        numGuess += 1
+        numGuesses += 1
 
         if guess == secretNum:
             break
