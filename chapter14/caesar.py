@@ -6,6 +6,7 @@ def getMode():
     while True:
         print('Do you wish to encrypt or decrypt a message?')
         mode = input().lower()
+        print(mode)
         if mode in 'encrypt e decrypt d'.split():
             return mode
         else:
