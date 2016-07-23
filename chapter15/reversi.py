@@ -262,7 +262,7 @@ while True:
             drawBoard(mainBoard)
             showPoints(playerTile, computerTile)
             input('Press Enter to see the computer\'s move.')
-            x, y = getcomputerMove(mainBoard, computerTile)
+            x, y = getComputerMove(mainBoard, computerTile)
             makeMove(mainBoard, computerTile, x,y)
             
             if getValidMoves(mainBoard, playerTile) == []:
